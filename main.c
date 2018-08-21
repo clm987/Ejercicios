@@ -21,10 +21,12 @@ int main()
          */
 
         int unNumero;
+        int otroNumero;
         float unFlotante;
         char unChar;
         float suma;
-
+        float division;
+/*
         unNumero=559;
         unFlotante=3.29;
         unChar= 'u';
@@ -45,6 +47,18 @@ int main()
         scanf("%c", &unChar);
         printf("El char es : %c", unChar);
         printf("El numero es: %d", unNumero);
+
+*/
+
+        printf("Ingrese un numero entero: ");
+        scanf("%d",&unNumero);
+        printf("Ingrese otro numero entero: ");
+        scanf("%d",&otroNumero);
+        division= (float)unNumero/otroNumero;
+
+        printf("El resultado es: %.2f", division);
+
+
 
 
     return 0;
