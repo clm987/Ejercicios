@@ -1,65 +1,185 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    //printf("Primer ejercicio de prueba!\n");
-    // printf("Primer ejercicio de prueba!\n");
-    /* Tipo de datos:
-        Enteros: int 1; 9; -4; 4 bytes
-        flotantes: float 3.24; 5/3; -2.9; 4 bytes
-        caracter: char 'a'; '?'; '4' las cadenas de texto van en comillas dobles "" 1 byte
-        nota: el + no funciona para concatenar, solo la (,)
-        Mascaras de entrada: es un simbolo que sirve para se reemplazado por la variable a mostrar
-            int %d
-            float %f
-            char %c
-            scanf : sirve para asignar un dato tomado del usuario y asignarlo a una direccion de memoria de la variable
-                scanf("mascara del tipo de variable", &variable) el operador & trae la direccion de memoria.
-            formatear un flotante: %.2f corta en dos decimales
+/* funciones: bloque de codigo modularizado que se usa con una funcion prefijada.
+    ventajas del uso de funciones: Mantenimiento mas rapido. Mas facil de debugear.
+    división de las tareas. reutilización de codigo.
 
-         */
 
-        int unNumero;
-        int otroNumero;
-        float unFlotante;
-        char unChar;
-        float suma;
-        float division;
-/*
-        unNumero=559;
-        unFlotante=3.29;
-        unChar= 'u';
-        suma= unNumero+unFlotante
+   Problema: sumar dos numeros y mostrar resultado.
 
-        //printf("El numero entero es: %d\n El numero flotante es: %f\n El caracter es: %c",unNumero,unFlotante,unChar);
-                //unFlotante=3.29;
-        //unChar= 'u';
-        printf("Ingrese un numero: ");
-        scanf("%d", &unNumero);
-        //printf("El numero es: %d", unNumero);
+    Instancias de funcion:
+    1) Declarar la funcion // prototipo //firma
+    2) llamada a la funcion
+    3) desarrollo de la funcion
 
-        printf("Ingrese un caracter: ");
-        fflush(stdin);
-        //para win
-        setbuf(stdin,NULL);
-        //PARA LINUX
-        scanf("%c", &unChar);
-        printf("El char es : %c", unChar);
-        printf("El numero es: %d", unNumero);
+    queDevuele comoSeLlama (queRecibe)
+
+    Lo que se define dentro de una funcion tiene alcance local dentro de esa funcion
+    si se define afuera tiene alcance global y puede ser visto por todas las funciones
 
 */
 
-        printf("Ingrese un numero entero: ");
-        scanf("%d",&unNumero);
-        printf("Ingrese otro numero entero: ");
-        scanf("%d",&otroNumero);
-        division= (float)unNumero/otroNumero;
 
-        printf("El resultado es: %.2f", division);
+/*
+int main()
+{
+
+    int numeroUno;
+    int numeroDos;
+    int suma;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = numeroUno + numeroDos;
 
 
+    printf("La suma de los dos numeros es : %d", suma);
+
+    return 0;
+}
+
+*/
+
+/*
+void sumar1 (void); // Prototipo. el parentesis se puede dejar vacio o llenar con "void" si esta vacio asume que sera un entero "int"
+
+int main()
+{
+
+    sumar1();
+    return 0;
+}
+
+
+void sumar1 (void)
+{
+
+    int numeroUno;
+    int numeroDos;
+    int suma;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = numeroUno + numeroDos;
+
+
+    printf("La suma de los dos numeros es : %d", suma);
+
+}
+*/
+
+/*void sumar2 (int, int); //recibe datos pero no retorna
+
+int main()
+{
+
+    int numeroUno;
+    int numeroDos;
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    sumar2(numeroUno,numeroDos);
+
+    return 0;
+}
+
+
+void sumar2 (int, int);
+{
+
+    int suma;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = numeroUno + numeroDos;
+
+
+    printf("La suma de los dos numeros es : %d", suma);
+
+}
+
+
+void sumar3 (int, int); // no recibe datos pero retorna
+
+int main()
+{
+    int suma;
+
+
+    sumar = sumar3();
+    printf("La suma es: %d", suma);
 
 
     return 0;
 }
+
+
+void sumar2 (int, int);
+int sumar3 (void);
+{
+    int numeroUno;
+    int numeroDos;
+    int suma;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = numeroUno + numeroDos;
+
+
+}
+
+*/
+
+int sumar4 (int numeroUno, int numeroDos); // no recibe datos pero retorna
+
+int main()
+{
+    int numeroUno;
+    int numeroDos;
+    int suma;
+
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = numeroUno + numeroDos;
+
+    printf("La suma es : %d", suma);
+
+    return 0;
+}
+int sumar4 (int numeroUno, int numeroDos);
+
+{
+    int suma;
+    suma = numeroUno + numeroDos;
+    return suma;
+
+}
+
+
+
+
+
