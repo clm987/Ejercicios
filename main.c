@@ -1,38 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-    int inicializaVector (int vector[], int cantidadDeElementos);
-    int mostrarVector (int vector[], int cantidadDeElementos);
-
+#include "EstructuraGenerica.h"
+//#include "susFunciones.h"
+#define CANTIDAD 10
 int main()
 {
-    int vector[5];
-    inicializaVector(vector,5);
-    mostrarVector(vector, 5);
+    eGenerica listadoGenerico[CANTIDAD];
+    eGen_init(listadoGenerico,CANTIDAD);
 
-    return 0;
-}
+    printf( "\n \t muestro el array... esta vacio");
+    eGen_mostrarListado(listadoGenerico,CANTIDAD);
+    getchar();
+
+    printf( "\n \t muestro el array con los borrados y vacios");
+    eGen_mostrarListadoConBorrados(listadoGenerico,CANTIDAD);
+    getchar();
+
+    eGen_alta(listadoGenerico,CANTIDAD);
+    eGen_alta(listadoGenerico,CANTIDAD);
+    printf( "\n \t cargo dos elementos y muestro el array");
+    eGen_mostrarListado(listadoGenerico,CANTIDAD);
+    getchar();
+
+    printf( "\n \t muestro el array con los borrados y vacios");
+    eGen_mostrarListadoConBorrados(listadoGenerico,CANTIDAD);
+    getchar();
 
 
-int inicializaVector (int vector[], int cantidadDeElementos)
-
-{
- for (;cantidadDeElementos>0;cantidadDeElementos--)
-    {
-
-     vector[cantidadDeElementos]=-1;
-
-    }
- return 0;
-}
-
-int mostrarVector (int vector[], int cantidadDeElementos)
-{
-    for(;cantidadDeElementos>0;cantidadDeElementos--)
-
-    {
-        printf("%d\n", vector[cantidadDeElementos]);
-
-    }
     return 0;
 }

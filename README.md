@@ -1,3 +1,2 @@
-# Ejercicios
-Ejercicios de practica
-Repositorio de ejercicios practicos. 
+# AMB-EstructuraGenerica
+AMB-EstructuraGenerica
