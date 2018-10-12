@@ -63,22 +63,38 @@ int deleteArray (int* arrayInt)
        }
        return retorno;
 }
+/*
+int* reSize retorno = NULL
+{
+    int* retorno = NULL;
+    int* auxiliaInt;
+    if (arrayInt != NULL && size >0)
+    {
+        retorno = realloc(arrayInt, sizeof(int)*size);
+    }
+    return retorno;
+
+}
+
+*/
+
+
+
 
 int* new_array (int size)
 int initArray(int* arrayInt, int limite, int valor)
 int showArray (int* arrayInt, int limite)
 int deleteArray (int* arrayInt)
+
+
 int main()
 {
-
-
     int* arrayEnteros;
-    new_array(100);
+    arrayEnteros = newArray(100);
+   // new_array(100);
     initArray(arrayEnteros,100,1024);
     showArray(arrayEnteros,100);
     deleteArray(arrayEnteros);
-
-
     return 0;
 }
 
